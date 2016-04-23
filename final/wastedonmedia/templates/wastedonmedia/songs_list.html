@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title> Songs </title>
+      <h1> Songs
+      {% if user %}(<a href="{% url 'wastedonmedia:songs_create' %}">add</a>){% endif %}
+      </h1>
+  </head>
+  <body background="http://g01.a.alicdn.com/kf/HTB17RK7LpXXXXbSXFXXq6xXFXXXT/Giclee-Canvas-Prints-Stretched-Framed-Fine-Art-Artwork-For-Wall-Decor-font-b-Speakers-b-font.jpg">
+    {% if songs %}
+    <ul>
+    {% for song in songs %}
+    <li>
+    <a href="{% url "wastedonmedia:songs_detail" song.name%}"> {{song.name}} </a>
+    </li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p style="text-indent: 2em">No hi ha cap song</p>
+    {% endif %}
+    
+    <br>
+      <a href='/'> Home </a>
+  </body>
+</html>

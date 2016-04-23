@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Film</title>
+  </head>
+  <body>
+    <h1>Song</h1>
+    <h2> {{ object.name }} </h2>
+    {%	if	object.image	%}
+        <p><img	src="{{object.image.url}}" width="300px"/></p>
+    {%	endif	%}
+    <ul>
+      <li>
+        <b>Name:</b> {{object.name}}
+      </li>
+      <li>
+        <b>Band:</b> {{object.group}}
+      </li>
+        <li>
+        <b>Album:</b> {{object.album}}
+      </li>
+        <li>
+        <b>Country:</b> {{object.country}}
+      </li>
+        <li>
+        <b>Genre:</b> {{object.genre}}
+      </li>
+      <li>
+        <b>Year:</b> {{object.year}}
+      </li>
+      <li>
+        <b>Duration:</b> {{object.duration}}
+      </li>
+      <li>
+        <b>Listen here:</b>
+        <a href="{{object.song_link}}" target="_blank"> {{object.song_link}} </a>
+      </li>
+        <li>
+        <b>Lyrics:</b> {{object.lyrics}}
+      </li>
+      <a href='/wastedonmedia/songs'> More songs </a>
+           <br>
+      <a href='/'> Home </a>
+    </ul>
+  </body>
+</html>

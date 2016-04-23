@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Film</title>
+  </head>
+  <body background="{{object.image.url}}">
+    <h1>Film</h1>
+    <h2> {{ object.name }} </h2>
+    {%	if	object.image	%}
+        <p><img	src="{{object.image.url}}" width="300px"/></p>
+    {%	endif	%}
+    <ul>
+      <li>
+        <b>Name:</b> {{object.name}}
+      </li>
+      <li>
+          <b>Director:</b> {{object.director}}
+      </li>
+      <li>
+          <b>Country:</b> {{object.country}}
+      </li>
+      <li>
+        <b>Year:</b> {{object.year}}
+      </li>
+      <li>
+          <b>Duration:</b> {{object.duration}}
+      </li>
+      <li>
+          <b>Genre:</b> {{object.genre}}
+      </li>
+      <li>
+        <b>Trailer:</b>
+        <a href="{{object.trailer}}" target="_blank"> {{object.trailer}} </a>
+      </li>
+      <li>
+          <b>Synopsis:</b> {{object.synopsis}}
+      </li>
+      <li>
+        <b>Website:</b>
+         <a href="{{object.website}}" target="_blank"> {{object.website}} </a>
+      </li>
+      <br>
+      <a href='/wastedonmedia/series'> More films </a>
+      <br>
+      <a href='/'> Home </a>
+    </ul>
+  </body>
+</html>
