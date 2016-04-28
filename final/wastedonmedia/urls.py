@@ -28,6 +28,27 @@ urlpatterns = [
     url(r'^song/(?P<pk>[a-zA-Z0-9 ]+)/$',
         SongsDetail.as_view(),
         name='songs_detail'),
+    
+    url(r'^films/(?P<pk>[a-zA-Z0-9 ]+)/edit/$',
+        UpdateView.as_view(
+            model=Film,
+            template_name='wastedonmedia/form.html',
+            form_class=FilmForm),
+        name='films_edit'),
+
+    url(r'^series/(?P<pk>[a-zA-Z0-9 ]+)/edit/$',
+        UpdateView.as_view(
+            model=Series,
+            template_name='wastedonmedia/form.html',
+            form_class=SerieForm),
+        name='series_edit'),
+
+    url(r'^songs/(?P<pk>[a-zA-Z0-9 ]+)/edit/$',
+        UpdateView.as_view(
+            model=Song,
+            template_name='wastedonmedia/form.html',
+            form_class=SongForm),
+        name='songs_edit'),
 
     url(r'^films/create/$',
         FilmCreate.as_view(),
