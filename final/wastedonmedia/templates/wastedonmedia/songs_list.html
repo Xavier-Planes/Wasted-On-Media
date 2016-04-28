@@ -10,7 +10,7 @@
     <ul>
     {% for song in songs %}
     <li>
-    <a href="{% url "wastedonmedia:songs_detail" song.name%}"> {{song.name}} </a>
+    <a href="{% url "wastedonmedia:songs_detail" song.name%}"> {{song.name}} - {{ song.group }}</a>
     </li>
     {% endfor %}
     </ul>
