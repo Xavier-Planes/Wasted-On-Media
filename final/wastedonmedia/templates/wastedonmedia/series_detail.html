@@ -3,7 +3,9 @@
     <title>Serie</title>
   </head>
   <body background="{{object.image.url}}">
-    <h1>Serie</h1>
+    <h1>Serie
+    (<a href="{% url 'wastedonmedia:series_edit' object.name %}">edit</a>)
+    </h1>
     <ul>
       <li>
         <b>Name:</b> {{object.name}}
