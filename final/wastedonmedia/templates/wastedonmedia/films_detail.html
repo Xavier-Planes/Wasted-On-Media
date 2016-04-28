@@ -3,7 +3,9 @@
     <title>Film</title>
   </head>
   <body background="{{object.image.url}}">
-    <h1>Film</h1>
+    <h1>Film
+    (<a href="{% url 'wastedonmedia:films_edit' object.name %}">edit</a>)
+    </h1>
     <h2> {{ object.name }} </h2>
     {%	if	object.image	%}
         <p><img	src="{{object.image.url}}" width="300px"/></p>
